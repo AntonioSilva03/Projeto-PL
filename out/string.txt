@@ -1,0 +1,5 @@
+PUSHN 0
+START
+PUSHS "Hello World"
+WRITES
+STOP

@@ -1,0 +1,1448 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    DASHDASH
+    ID
+    MINUS_MINUS
+    NEWLINE
+    NOT
+    STRING
+
+Grammar
+
+Rule 0     S' -> program
+Rule 1     program -> statements
+Rule 2     statements -> statements statement
+Rule 3     statements -> statement
+Rule 4     statement -> function_declaration
+Rule 5     statement -> expressiontypes
+Rule 6     statement -> function_dot
+Rule 7     statement -> arithmetic_expression
+Rule 8     statement -> comparison_expression
+Rule 9     statement -> function_string
+Rule 10    statement -> function_char
+Rule 11    statement -> function_emit
+Rule 12    statement -> space
+Rule 13    statement -> cr
+Rule 14    statement -> 2dup
+Rule 15    statement -> condicinal1
+Rule 16    statement -> condicinal2
+Rule 17    function_declaration -> FUNCTION
+Rule 18    cr -> CR
+Rule 19    function_char -> CHAR
+Rule 20    space -> SPACE
+Rule 21    function_string -> FUNCTION_STRING
+Rule 22    function_emit -> EMIT
+Rule 23    expressiontypes -> NUMBER
+Rule 24    function_dot -> DOT
+Rule 25    arithmetic_expression -> statement statement arithmetic_op
+Rule 26    arithmetic_op -> ADD
+Rule 27    arithmetic_op -> MINUS
+Rule 28    arithmetic_op -> TIMES
+Rule 29    arithmetic_op -> DIVIDE
+Rule 30    arithmetic_op -> MOD
+Rule 31    comparison_expression -> statement statement comparison_op
+Rule 32    condicinal1 -> CONDICIONAL1
+Rule 33    condicinal2 -> CONDICIONAL2
+Rule 34    2dup -> 2DUP
+Rule 35    comparison_op -> INF
+Rule 36    comparison_op -> INFEQ
+Rule 37    comparison_op -> SUP
+Rule 38    comparison_op -> SUPEQ
+
+Terminals, with rules where they appear
+
+2DUP                 : 34
+ADD                  : 26
+CHAR                 : 19
+CONDICIONAL1         : 32
+CONDICIONAL2         : 33
+CR                   : 18
+DASHDASH             : 
+DIVIDE               : 29
+DOT                  : 24
+EMIT                 : 22
+FUNCTION             : 17
+FUNCTION_STRING      : 21
+ID                   : 
+INF                  : 35
+INFEQ                : 36
+MINUS                : 27
+MINUS_MINUS          : 
+MOD                  : 30
+NEWLINE              : 
+NOT                  : 
+NUMBER               : 23
+SPACE                : 20
+STRING               : 
+SUP                  : 37
+SUPEQ                : 38
+TIMES                : 28
+error                : 
+
+Nonterminals, with rules where they appear
+
+2dup                 : 14
+arithmetic_expression : 7
+arithmetic_op        : 25
+comparison_expression : 8
+comparison_op        : 31
+condicinal1          : 15
+condicinal2          : 16
+cr                   : 13
+expressiontypes      : 5
+function_char        : 10
+function_declaration : 4
+function_dot         : 6
+function_emit        : 11
+function_string      : 9
+program              : 0
+space                : 12
+statement            : 2 3 25 25 31 31
+statements           : 1 2
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . program
+    (1) program -> . statements
+    (2) statements -> . statements statement
+    (3) statements -> . statement
+    (4) statement -> . function_declaration
+    (5) statement -> . expressiontypes
+    (6) statement -> . function_dot
+    (7) statement -> . arithmetic_expression
+    (8) statement -> . comparison_expression
+    (9) statement -> . function_string
+    (10) statement -> . function_char
+    (11) statement -> . function_emit
+    (12) statement -> . space
+    (13) statement -> . cr
+    (14) statement -> . 2dup
+    (15) statement -> . condicinal1
+    (16) statement -> . condicinal2
+    (17) function_declaration -> . FUNCTION
+    (23) expressiontypes -> . NUMBER
+    (24) function_dot -> . DOT
+    (25) arithmetic_expression -> . statement statement arithmetic_op
+    (31) comparison_expression -> . statement statement comparison_op
+    (21) function_string -> . FUNCTION_STRING
+    (19) function_char -> . CHAR
+    (22) function_emit -> . EMIT
+    (20) space -> . SPACE
+    (18) cr -> . CR
+    (34) 2dup -> . 2DUP
+    (32) condicinal1 -> . CONDICIONAL1
+    (33) condicinal2 -> . CONDICIONAL2
+
+    FUNCTION        shift and go to state 17
+    NUMBER          shift and go to state 18
+    DOT             shift and go to state 19
+    FUNCTION_STRING shift and go to state 20
+    CHAR            shift and go to state 21
+    EMIT            shift and go to state 22
+    SPACE           shift and go to state 23
+    CR              shift and go to state 24
+    2DUP            shift and go to state 25
+    CONDICIONAL1    shift and go to state 26
+    CONDICIONAL2    shift and go to state 27
+
+    program                        shift and go to state 1
+    statements                     shift and go to state 2
+    statement                      shift and go to state 3
+    function_declaration           shift and go to state 4
+    expressiontypes                shift and go to state 5
+    function_dot                   shift and go to state 6
+    arithmetic_expression          shift and go to state 7
+    comparison_expression          shift and go to state 8
+    function_string                shift and go to state 9
+    function_char                  shift and go to state 10
+    function_emit                  shift and go to state 11
+    space                          shift and go to state 12
+    cr                             shift and go to state 13
+    2dup                           shift and go to state 14
+    condicinal1                    shift and go to state 15
+    condicinal2                    shift and go to state 16
+
+state 1
+
+    (0) S' -> program .
+
+
+
+state 2
+
+    (1) program -> statements .
+    (2) statements -> statements . statement
+    (4) statement -> . function_declaration
+    (5) statement -> . expressiontypes
+    (6) statement -> . function_dot
+    (7) statement -> . arithmetic_expression
+    (8) statement -> . comparison_expression
+    (9) statement -> . function_string
+    (10) statement -> . function_char
+    (11) statement -> . function_emit
+    (12) statement -> . space
+    (13) statement -> . cr
+    (14) statement -> . 2dup
+    (15) statement -> . condicinal1
+    (16) statement -> . condicinal2
+    (17) function_declaration -> . FUNCTION
+    (23) expressiontypes -> . NUMBER
+    (24) function_dot -> . DOT
+    (25) arithmetic_expression -> . statement statement arithmetic_op
+    (31) comparison_expression -> . statement statement comparison_op
+    (21) function_string -> . FUNCTION_STRING
+    (19) function_char -> . CHAR
+    (22) function_emit -> . EMIT
+    (20) space -> . SPACE
+    (18) cr -> . CR
+    (34) 2dup -> . 2DUP
+    (32) condicinal1 -> . CONDICIONAL1
+    (33) condicinal2 -> . CONDICIONAL2
+
+    $end            reduce using rule 1 (program -> statements .)
+    FUNCTION        shift and go to state 17
+    NUMBER          shift and go to state 18
+    DOT             shift and go to state 19
+    FUNCTION_STRING shift and go to state 20
+    CHAR            shift and go to state 21
+    EMIT            shift and go to state 22
+    SPACE           shift and go to state 23
+    CR              shift and go to state 24
+    2DUP            shift and go to state 25
+    CONDICIONAL1    shift and go to state 26
+    CONDICIONAL2    shift and go to state 27
+
+    statement                      shift and go to state 28
+    function_declaration           shift and go to state 4
+    expressiontypes                shift and go to state 5
+    function_dot                   shift and go to state 6
+    arithmetic_expression          shift and go to state 7
+    comparison_expression          shift and go to state 8
+    function_string                shift and go to state 9
+    function_char                  shift and go to state 10
+    function_emit                  shift and go to state 11
+    space                          shift and go to state 12
+    cr                             shift and go to state 13
+    2dup                           shift and go to state 14
+    condicinal1                    shift and go to state 15
+    condicinal2                    shift and go to state 16
+
+state 3
+
+    (3) statements -> statement .
+    (25) arithmetic_expression -> statement . statement arithmetic_op
+    (31) comparison_expression -> statement . statement comparison_op
+    (4) statement -> . function_declaration
+    (5) statement -> . expressiontypes
+    (6) statement -> . function_dot
+    (7) statement -> . arithmetic_expression
+    (8) statement -> . comparison_expression
+    (9) statement -> . function_string
+    (10) statement -> . function_char
+    (11) statement -> . function_emit
+    (12) statement -> . space
+    (13) statement -> . cr
+    (14) statement -> . 2dup
+    (15) statement -> . condicinal1
+    (16) statement -> . condicinal2
+    (17) function_declaration -> . FUNCTION
+    (23) expressiontypes -> . NUMBER
+    (24) function_dot -> . DOT
+    (25) arithmetic_expression -> . statement statement arithmetic_op
+    (31) comparison_expression -> . statement statement comparison_op
+    (21) function_string -> . FUNCTION_STRING
+    (19) function_char -> . CHAR
+    (22) function_emit -> . EMIT
+    (20) space -> . SPACE
+    (18) cr -> . CR
+    (34) 2dup -> . 2DUP
+    (32) condicinal1 -> . CONDICIONAL1
+    (33) condicinal2 -> . CONDICIONAL2
+
+  ! shift/reduce conflict for FUNCTION resolved as shift
+  ! shift/reduce conflict for NUMBER resolved as shift
+  ! shift/reduce conflict for DOT resolved as shift
+  ! shift/reduce conflict for FUNCTION_STRING resolved as shift
+  ! shift/reduce conflict for CHAR resolved as shift
+  ! shift/reduce conflict for EMIT resolved as shift
+  ! shift/reduce conflict for SPACE resolved as shift
+  ! shift/reduce conflict for CR resolved as shift
+  ! shift/reduce conflict for 2DUP resolved as shift
+  ! shift/reduce conflict for CONDICIONAL1 resolved as shift
+  ! shift/reduce conflict for CONDICIONAL2 resolved as shift
+    $end            reduce using rule 3 (statements -> statement .)
+    FUNCTION        shift and go to state 17
+    NUMBER          shift and go to state 18
+    DOT             shift and go to state 19
+    FUNCTION_STRING shift and go to state 20
+    CHAR            shift and go to state 21
+    EMIT            shift and go to state 22
+    SPACE           shift and go to state 23
+    CR              shift and go to state 24
+    2DUP            shift and go to state 25
+    CONDICIONAL1    shift and go to state 26
+    CONDICIONAL2    shift and go to state 27
+
+  ! FUNCTION        [ reduce using rule 3 (statements -> statement .) ]
+  ! NUMBER          [ reduce using rule 3 (statements -> statement .) ]
+  ! DOT             [ reduce using rule 3 (statements -> statement .) ]
+  ! FUNCTION_STRING [ reduce using rule 3 (statements -> statement .) ]
+  ! CHAR            [ reduce using rule 3 (statements -> statement .) ]
+  ! EMIT            [ reduce using rule 3 (statements -> statement .) ]
+  ! SPACE           [ reduce using rule 3 (statements -> statement .) ]
+  ! CR              [ reduce using rule 3 (statements -> statement .) ]
+  ! 2DUP            [ reduce using rule 3 (statements -> statement .) ]
+  ! CONDICIONAL1    [ reduce using rule 3 (statements -> statement .) ]
+  ! CONDICIONAL2    [ reduce using rule 3 (statements -> statement .) ]
+
+    statement                      shift and go to state 29
+    function_declaration           shift and go to state 4
+    expressiontypes                shift and go to state 5
+    function_dot                   shift and go to state 6
+    arithmetic_expression          shift and go to state 7
+    comparison_expression          shift and go to state 8
+    function_string                shift and go to state 9
+    function_char                  shift and go to state 10
+    function_emit                  shift and go to state 11
+    space                          shift and go to state 12
+    cr                             shift and go to state 13
+    2dup                           shift and go to state 14
+    condicinal1                    shift and go to state 15
+    condicinal2                    shift and go to state 16
+
+state 4
+
+    (4) statement -> function_declaration .
+
+    FUNCTION        reduce using rule 4 (statement -> function_declaration .)
+    NUMBER          reduce using rule 4 (statement -> function_declaration .)
+    DOT             reduce using rule 4 (statement -> function_declaration .)
+    FUNCTION_STRING reduce using rule 4 (statement -> function_declaration .)
+    CHAR            reduce using rule 4 (statement -> function_declaration .)
+    EMIT            reduce using rule 4 (statement -> function_declaration .)
+    SPACE           reduce using rule 4 (statement -> function_declaration .)
+    CR              reduce using rule 4 (statement -> function_declaration .)
+    2DUP            reduce using rule 4 (statement -> function_declaration .)
+    CONDICIONAL1    reduce using rule 4 (statement -> function_declaration .)
+    CONDICIONAL2    reduce using rule 4 (statement -> function_declaration .)
+    $end            reduce using rule 4 (statement -> function_declaration .)
+    ADD             reduce using rule 4 (statement -> function_declaration .)
+    MINUS           reduce using rule 4 (statement -> function_declaration .)
+    TIMES           reduce using rule 4 (statement -> function_declaration .)
+    DIVIDE          reduce using rule 4 (statement -> function_declaration .)
+    MOD             reduce using rule 4 (statement -> function_declaration .)
+    INF             reduce using rule 4 (statement -> function_declaration .)
+    INFEQ           reduce using rule 4 (statement -> function_declaration .)
+    SUP             reduce using rule 4 (statement -> function_declaration .)
+    SUPEQ           reduce using rule 4 (statement -> function_declaration .)
+
+
+state 5
+
+    (5) statement -> expressiontypes .
+
+    FUNCTION        reduce using rule 5 (statement -> expressiontypes .)
+    NUMBER          reduce using rule 5 (statement -> expressiontypes .)
+    DOT             reduce using rule 5 (statement -> expressiontypes .)
+    FUNCTION_STRING reduce using rule 5 (statement -> expressiontypes .)
+    CHAR            reduce using rule 5 (statement -> expressiontypes .)
+    EMIT            reduce using rule 5 (statement -> expressiontypes .)
+    SPACE           reduce using rule 5 (statement -> expressiontypes .)
+    CR              reduce using rule 5 (statement -> expressiontypes .)
+    2DUP            reduce using rule 5 (statement -> expressiontypes .)
+    CONDICIONAL1    reduce using rule 5 (statement -> expressiontypes .)
+    CONDICIONAL2    reduce using rule 5 (statement -> expressiontypes .)
+    $end            reduce using rule 5 (statement -> expressiontypes .)
+    ADD             reduce using rule 5 (statement -> expressiontypes .)
+    MINUS           reduce using rule 5 (statement -> expressiontypes .)
+    TIMES           reduce using rule 5 (statement -> expressiontypes .)
+    DIVIDE          reduce using rule 5 (statement -> expressiontypes .)
+    MOD             reduce using rule 5 (statement -> expressiontypes .)
+    INF             reduce using rule 5 (statement -> expressiontypes .)
+    INFEQ           reduce using rule 5 (statement -> expressiontypes .)
+    SUP             reduce using rule 5 (statement -> expressiontypes .)
+    SUPEQ           reduce using rule 5 (statement -> expressiontypes .)
+
+
+state 6
+
+    (6) statement -> function_dot .
+
+    FUNCTION        reduce using rule 6 (statement -> function_dot .)
+    NUMBER          reduce using rule 6 (statement -> function_dot .)
+    DOT             reduce using rule 6 (statement -> function_dot .)
+    FUNCTION_STRING reduce using rule 6 (statement -> function_dot .)
+    CHAR            reduce using rule 6 (statement -> function_dot .)
+    EMIT            reduce using rule 6 (statement -> function_dot .)
+    SPACE           reduce using rule 6 (statement -> function_dot .)
+    CR              reduce using rule 6 (statement -> function_dot .)
+    2DUP            reduce using rule 6 (statement -> function_dot .)
+    CONDICIONAL1    reduce using rule 6 (statement -> function_dot .)
+    CONDICIONAL2    reduce using rule 6 (statement -> function_dot .)
+    $end            reduce using rule 6 (statement -> function_dot .)
+    ADD             reduce using rule 6 (statement -> function_dot .)
+    MINUS           reduce using rule 6 (statement -> function_dot .)
+    TIMES           reduce using rule 6 (statement -> function_dot .)
+    DIVIDE          reduce using rule 6 (statement -> function_dot .)
+    MOD             reduce using rule 6 (statement -> function_dot .)
+    INF             reduce using rule 6 (statement -> function_dot .)
+    INFEQ           reduce using rule 6 (statement -> function_dot .)
+    SUP             reduce using rule 6 (statement -> function_dot .)
+    SUPEQ           reduce using rule 6 (statement -> function_dot .)
+
+
+state 7
+
+    (7) statement -> arithmetic_expression .
+
+    FUNCTION        reduce using rule 7 (statement -> arithmetic_expression .)
+    NUMBER          reduce using rule 7 (statement -> arithmetic_expression .)
+    DOT             reduce using rule 7 (statement -> arithmetic_expression .)
+    FUNCTION_STRING reduce using rule 7 (statement -> arithmetic_expression .)
+    CHAR            reduce using rule 7 (statement -> arithmetic_expression .)
+    EMIT            reduce using rule 7 (statement -> arithmetic_expression .)
+    SPACE           reduce using rule 7 (statement -> arithmetic_expression .)
+    CR              reduce using rule 7 (statement -> arithmetic_expression .)
+    2DUP            reduce using rule 7 (statement -> arithmetic_expression .)
+    CONDICIONAL1    reduce using rule 7 (statement -> arithmetic_expression .)
+    CONDICIONAL2    reduce using rule 7 (statement -> arithmetic_expression .)
+    $end            reduce using rule 7 (statement -> arithmetic_expression .)
+    ADD             reduce using rule 7 (statement -> arithmetic_expression .)
+    MINUS           reduce using rule 7 (statement -> arithmetic_expression .)
+    TIMES           reduce using rule 7 (statement -> arithmetic_expression .)
+    DIVIDE          reduce using rule 7 (statement -> arithmetic_expression .)
+    MOD             reduce using rule 7 (statement -> arithmetic_expression .)
+    INF             reduce using rule 7 (statement -> arithmetic_expression .)
+    INFEQ           reduce using rule 7 (statement -> arithmetic_expression .)
+    SUP             reduce using rule 7 (statement -> arithmetic_expression .)
+    SUPEQ           reduce using rule 7 (statement -> arithmetic_expression .)
+
+
+state 8
+
+    (8) statement -> comparison_expression .
+
+    FUNCTION        reduce using rule 8 (statement -> comparison_expression .)
+    NUMBER          reduce using rule 8 (statement -> comparison_expression .)
+    DOT             reduce using rule 8 (statement -> comparison_expression .)
+    FUNCTION_STRING reduce using rule 8 (statement -> comparison_expression .)
+    CHAR            reduce using rule 8 (statement -> comparison_expression .)
+    EMIT            reduce using rule 8 (statement -> comparison_expression .)
+    SPACE           reduce using rule 8 (statement -> comparison_expression .)
+    CR              reduce using rule 8 (statement -> comparison_expression .)
+    2DUP            reduce using rule 8 (statement -> comparison_expression .)
+    CONDICIONAL1    reduce using rule 8 (statement -> comparison_expression .)
+    CONDICIONAL2    reduce using rule 8 (statement -> comparison_expression .)
+    $end            reduce using rule 8 (statement -> comparison_expression .)
+    ADD             reduce using rule 8 (statement -> comparison_expression .)
+    MINUS           reduce using rule 8 (statement -> comparison_expression .)
+    TIMES           reduce using rule 8 (statement -> comparison_expression .)
+    DIVIDE          reduce using rule 8 (statement -> comparison_expression .)
+    MOD             reduce using rule 8 (statement -> comparison_expression .)
+    INF             reduce using rule 8 (statement -> comparison_expression .)
+    INFEQ           reduce using rule 8 (statement -> comparison_expression .)
+    SUP             reduce using rule 8 (statement -> comparison_expression .)
+    SUPEQ           reduce using rule 8 (statement -> comparison_expression .)
+
+
+state 9
+
+    (9) statement -> function_string .
+
+    FUNCTION        reduce using rule 9 (statement -> function_string .)
+    NUMBER          reduce using rule 9 (statement -> function_string .)
+    DOT             reduce using rule 9 (statement -> function_string .)
+    FUNCTION_STRING reduce using rule 9 (statement -> function_string .)
+    CHAR            reduce using rule 9 (statement -> function_string .)
+    EMIT            reduce using rule 9 (statement -> function_string .)
+    SPACE           reduce using rule 9 (statement -> function_string .)
+    CR              reduce using rule 9 (statement -> function_string .)
+    2DUP            reduce using rule 9 (statement -> function_string .)
+    CONDICIONAL1    reduce using rule 9 (statement -> function_string .)
+    CONDICIONAL2    reduce using rule 9 (statement -> function_string .)
+    $end            reduce using rule 9 (statement -> function_string .)
+    ADD             reduce using rule 9 (statement -> function_string .)
+    MINUS           reduce using rule 9 (statement -> function_string .)
+    TIMES           reduce using rule 9 (statement -> function_string .)
+    DIVIDE          reduce using rule 9 (statement -> function_string .)
+    MOD             reduce using rule 9 (statement -> function_string .)
+    INF             reduce using rule 9 (statement -> function_string .)
+    INFEQ           reduce using rule 9 (statement -> function_string .)
+    SUP             reduce using rule 9 (statement -> function_string .)
+    SUPEQ           reduce using rule 9 (statement -> function_string .)
+
+
+state 10
+
+    (10) statement -> function_char .
+
+    FUNCTION        reduce using rule 10 (statement -> function_char .)
+    NUMBER          reduce using rule 10 (statement -> function_char .)
+    DOT             reduce using rule 10 (statement -> function_char .)
+    FUNCTION_STRING reduce using rule 10 (statement -> function_char .)
+    CHAR            reduce using rule 10 (statement -> function_char .)
+    EMIT            reduce using rule 10 (statement -> function_char .)
+    SPACE           reduce using rule 10 (statement -> function_char .)
+    CR              reduce using rule 10 (statement -> function_char .)
+    2DUP            reduce using rule 10 (statement -> function_char .)
+    CONDICIONAL1    reduce using rule 10 (statement -> function_char .)
+    CONDICIONAL2    reduce using rule 10 (statement -> function_char .)
+    $end            reduce using rule 10 (statement -> function_char .)
+    ADD             reduce using rule 10 (statement -> function_char .)
+    MINUS           reduce using rule 10 (statement -> function_char .)
+    TIMES           reduce using rule 10 (statement -> function_char .)
+    DIVIDE          reduce using rule 10 (statement -> function_char .)
+    MOD             reduce using rule 10 (statement -> function_char .)
+    INF             reduce using rule 10 (statement -> function_char .)
+    INFEQ           reduce using rule 10 (statement -> function_char .)
+    SUP             reduce using rule 10 (statement -> function_char .)
+    SUPEQ           reduce using rule 10 (statement -> function_char .)
+
+
+state 11
+
+    (11) statement -> function_emit .
+
+    FUNCTION        reduce using rule 11 (statement -> function_emit .)
+    NUMBER          reduce using rule 11 (statement -> function_emit .)
+    DOT             reduce using rule 11 (statement -> function_emit .)
+    FUNCTION_STRING reduce using rule 11 (statement -> function_emit .)
+    CHAR            reduce using rule 11 (statement -> function_emit .)
+    EMIT            reduce using rule 11 (statement -> function_emit .)
+    SPACE           reduce using rule 11 (statement -> function_emit .)
+    CR              reduce using rule 11 (statement -> function_emit .)
+    2DUP            reduce using rule 11 (statement -> function_emit .)
+    CONDICIONAL1    reduce using rule 11 (statement -> function_emit .)
+    CONDICIONAL2    reduce using rule 11 (statement -> function_emit .)
+    $end            reduce using rule 11 (statement -> function_emit .)
+    ADD             reduce using rule 11 (statement -> function_emit .)
+    MINUS           reduce using rule 11 (statement -> function_emit .)
+    TIMES           reduce using rule 11 (statement -> function_emit .)
+    DIVIDE          reduce using rule 11 (statement -> function_emit .)
+    MOD             reduce using rule 11 (statement -> function_emit .)
+    INF             reduce using rule 11 (statement -> function_emit .)
+    INFEQ           reduce using rule 11 (statement -> function_emit .)
+    SUP             reduce using rule 11 (statement -> function_emit .)
+    SUPEQ           reduce using rule 11 (statement -> function_emit .)
+
+
+state 12
+
+    (12) statement -> space .
+
+    FUNCTION        reduce using rule 12 (statement -> space .)
+    NUMBER          reduce using rule 12 (statement -> space .)
+    DOT             reduce using rule 12 (statement -> space .)
+    FUNCTION_STRING reduce using rule 12 (statement -> space .)
+    CHAR            reduce using rule 12 (statement -> space .)
+    EMIT            reduce using rule 12 (statement -> space .)
+    SPACE           reduce using rule 12 (statement -> space .)
+    CR              reduce using rule 12 (statement -> space .)
+    2DUP            reduce using rule 12 (statement -> space .)
+    CONDICIONAL1    reduce using rule 12 (statement -> space .)
+    CONDICIONAL2    reduce using rule 12 (statement -> space .)
+    $end            reduce using rule 12 (statement -> space .)
+    ADD             reduce using rule 12 (statement -> space .)
+    MINUS           reduce using rule 12 (statement -> space .)
+    TIMES           reduce using rule 12 (statement -> space .)
+    DIVIDE          reduce using rule 12 (statement -> space .)
+    MOD             reduce using rule 12 (statement -> space .)
+    INF             reduce using rule 12 (statement -> space .)
+    INFEQ           reduce using rule 12 (statement -> space .)
+    SUP             reduce using rule 12 (statement -> space .)
+    SUPEQ           reduce using rule 12 (statement -> space .)
+
+
+state 13
+
+    (13) statement -> cr .
+
+    FUNCTION        reduce using rule 13 (statement -> cr .)
+    NUMBER          reduce using rule 13 (statement -> cr .)
+    DOT             reduce using rule 13 (statement -> cr .)
+    FUNCTION_STRING reduce using rule 13 (statement -> cr .)
+    CHAR            reduce using rule 13 (statement -> cr .)
+    EMIT            reduce using rule 13 (statement -> cr .)
+    SPACE           reduce using rule 13 (statement -> cr .)
+    CR              reduce using rule 13 (statement -> cr .)
+    2DUP            reduce using rule 13 (statement -> cr .)
+    CONDICIONAL1    reduce using rule 13 (statement -> cr .)
+    CONDICIONAL2    reduce using rule 13 (statement -> cr .)
+    $end            reduce using rule 13 (statement -> cr .)
+    ADD             reduce using rule 13 (statement -> cr .)
+    MINUS           reduce using rule 13 (statement -> cr .)
+    TIMES           reduce using rule 13 (statement -> cr .)
+    DIVIDE          reduce using rule 13 (statement -> cr .)
+    MOD             reduce using rule 13 (statement -> cr .)
+    INF             reduce using rule 13 (statement -> cr .)
+    INFEQ           reduce using rule 13 (statement -> cr .)
+    SUP             reduce using rule 13 (statement -> cr .)
+    SUPEQ           reduce using rule 13 (statement -> cr .)
+
+
+state 14
+
+    (14) statement -> 2dup .
+
+    FUNCTION        reduce using rule 14 (statement -> 2dup .)
+    NUMBER          reduce using rule 14 (statement -> 2dup .)
+    DOT             reduce using rule 14 (statement -> 2dup .)
+    FUNCTION_STRING reduce using rule 14 (statement -> 2dup .)
+    CHAR            reduce using rule 14 (statement -> 2dup .)
+    EMIT            reduce using rule 14 (statement -> 2dup .)
+    SPACE           reduce using rule 14 (statement -> 2dup .)
+    CR              reduce using rule 14 (statement -> 2dup .)
+    2DUP            reduce using rule 14 (statement -> 2dup .)
+    CONDICIONAL1    reduce using rule 14 (statement -> 2dup .)
+    CONDICIONAL2    reduce using rule 14 (statement -> 2dup .)
+    $end            reduce using rule 14 (statement -> 2dup .)
+    ADD             reduce using rule 14 (statement -> 2dup .)
+    MINUS           reduce using rule 14 (statement -> 2dup .)
+    TIMES           reduce using rule 14 (statement -> 2dup .)
+    DIVIDE          reduce using rule 14 (statement -> 2dup .)
+    MOD             reduce using rule 14 (statement -> 2dup .)
+    INF             reduce using rule 14 (statement -> 2dup .)
+    INFEQ           reduce using rule 14 (statement -> 2dup .)
+    SUP             reduce using rule 14 (statement -> 2dup .)
+    SUPEQ           reduce using rule 14 (statement -> 2dup .)
+
+
+state 15
+
+    (15) statement -> condicinal1 .
+
+    FUNCTION        reduce using rule 15 (statement -> condicinal1 .)
+    NUMBER          reduce using rule 15 (statement -> condicinal1 .)
+    DOT             reduce using rule 15 (statement -> condicinal1 .)
+    FUNCTION_STRING reduce using rule 15 (statement -> condicinal1 .)
+    CHAR            reduce using rule 15 (statement -> condicinal1 .)
+    EMIT            reduce using rule 15 (statement -> condicinal1 .)
+    SPACE           reduce using rule 15 (statement -> condicinal1 .)
+    CR              reduce using rule 15 (statement -> condicinal1 .)
+    2DUP            reduce using rule 15 (statement -> condicinal1 .)
+    CONDICIONAL1    reduce using rule 15 (statement -> condicinal1 .)
+    CONDICIONAL2    reduce using rule 15 (statement -> condicinal1 .)
+    $end            reduce using rule 15 (statement -> condicinal1 .)
+    ADD             reduce using rule 15 (statement -> condicinal1 .)
+    MINUS           reduce using rule 15 (statement -> condicinal1 .)
+    TIMES           reduce using rule 15 (statement -> condicinal1 .)
+    DIVIDE          reduce using rule 15 (statement -> condicinal1 .)
+    MOD             reduce using rule 15 (statement -> condicinal1 .)
+    INF             reduce using rule 15 (statement -> condicinal1 .)
+    INFEQ           reduce using rule 15 (statement -> condicinal1 .)
+    SUP             reduce using rule 15 (statement -> condicinal1 .)
+    SUPEQ           reduce using rule 15 (statement -> condicinal1 .)
+
+
+state 16
+
+    (16) statement -> condicinal2 .
+
+    FUNCTION        reduce using rule 16 (statement -> condicinal2 .)
+    NUMBER          reduce using rule 16 (statement -> condicinal2 .)
+    DOT             reduce using rule 16 (statement -> condicinal2 .)
+    FUNCTION_STRING reduce using rule 16 (statement -> condicinal2 .)
+    CHAR            reduce using rule 16 (statement -> condicinal2 .)
+    EMIT            reduce using rule 16 (statement -> condicinal2 .)
+    SPACE           reduce using rule 16 (statement -> condicinal2 .)
+    CR              reduce using rule 16 (statement -> condicinal2 .)
+    2DUP            reduce using rule 16 (statement -> condicinal2 .)
+    CONDICIONAL1    reduce using rule 16 (statement -> condicinal2 .)
+    CONDICIONAL2    reduce using rule 16 (statement -> condicinal2 .)
+    $end            reduce using rule 16 (statement -> condicinal2 .)
+    ADD             reduce using rule 16 (statement -> condicinal2 .)
+    MINUS           reduce using rule 16 (statement -> condicinal2 .)
+    TIMES           reduce using rule 16 (statement -> condicinal2 .)
+    DIVIDE          reduce using rule 16 (statement -> condicinal2 .)
+    MOD             reduce using rule 16 (statement -> condicinal2 .)
+    INF             reduce using rule 16 (statement -> condicinal2 .)
+    INFEQ           reduce using rule 16 (statement -> condicinal2 .)
+    SUP             reduce using rule 16 (statement -> condicinal2 .)
+    SUPEQ           reduce using rule 16 (statement -> condicinal2 .)
+
+
+state 17
+
+    (17) function_declaration -> FUNCTION .
+
+    FUNCTION        reduce using rule 17 (function_declaration -> FUNCTION .)
+    NUMBER          reduce using rule 17 (function_declaration -> FUNCTION .)
+    DOT             reduce using rule 17 (function_declaration -> FUNCTION .)
+    FUNCTION_STRING reduce using rule 17 (function_declaration -> FUNCTION .)
+    CHAR            reduce using rule 17 (function_declaration -> FUNCTION .)
+    EMIT            reduce using rule 17 (function_declaration -> FUNCTION .)
+    SPACE           reduce using rule 17 (function_declaration -> FUNCTION .)
+    CR              reduce using rule 17 (function_declaration -> FUNCTION .)
+    2DUP            reduce using rule 17 (function_declaration -> FUNCTION .)
+    CONDICIONAL1    reduce using rule 17 (function_declaration -> FUNCTION .)
+    CONDICIONAL2    reduce using rule 17 (function_declaration -> FUNCTION .)
+    $end            reduce using rule 17 (function_declaration -> FUNCTION .)
+    ADD             reduce using rule 17 (function_declaration -> FUNCTION .)
+    MINUS           reduce using rule 17 (function_declaration -> FUNCTION .)
+    TIMES           reduce using rule 17 (function_declaration -> FUNCTION .)
+    DIVIDE          reduce using rule 17 (function_declaration -> FUNCTION .)
+    MOD             reduce using rule 17 (function_declaration -> FUNCTION .)
+    INF             reduce using rule 17 (function_declaration -> FUNCTION .)
+    INFEQ           reduce using rule 17 (function_declaration -> FUNCTION .)
+    SUP             reduce using rule 17 (function_declaration -> FUNCTION .)
+    SUPEQ           reduce using rule 17 (function_declaration -> FUNCTION .)
+
+
+state 18
+
+    (23) expressiontypes -> NUMBER .
+
+    FUNCTION        reduce using rule 23 (expressiontypes -> NUMBER .)
+    NUMBER          reduce using rule 23 (expressiontypes -> NUMBER .)
+    DOT             reduce using rule 23 (expressiontypes -> NUMBER .)
+    FUNCTION_STRING reduce using rule 23 (expressiontypes -> NUMBER .)
+    CHAR            reduce using rule 23 (expressiontypes -> NUMBER .)
+    EMIT            reduce using rule 23 (expressiontypes -> NUMBER .)
+    SPACE           reduce using rule 23 (expressiontypes -> NUMBER .)
+    CR              reduce using rule 23 (expressiontypes -> NUMBER .)
+    2DUP            reduce using rule 23 (expressiontypes -> NUMBER .)
+    CONDICIONAL1    reduce using rule 23 (expressiontypes -> NUMBER .)
+    CONDICIONAL2    reduce using rule 23 (expressiontypes -> NUMBER .)
+    $end            reduce using rule 23 (expressiontypes -> NUMBER .)
+    ADD             reduce using rule 23 (expressiontypes -> NUMBER .)
+    MINUS           reduce using rule 23 (expressiontypes -> NUMBER .)
+    TIMES           reduce using rule 23 (expressiontypes -> NUMBER .)
+    DIVIDE          reduce using rule 23 (expressiontypes -> NUMBER .)
+    MOD             reduce using rule 23 (expressiontypes -> NUMBER .)
+    INF             reduce using rule 23 (expressiontypes -> NUMBER .)
+    INFEQ           reduce using rule 23 (expressiontypes -> NUMBER .)
+    SUP             reduce using rule 23 (expressiontypes -> NUMBER .)
+    SUPEQ           reduce using rule 23 (expressiontypes -> NUMBER .)
+
+
+state 19
+
+    (24) function_dot -> DOT .
+
+    FUNCTION        reduce using rule 24 (function_dot -> DOT .)
+    NUMBER          reduce using rule 24 (function_dot -> DOT .)
+    DOT             reduce using rule 24 (function_dot -> DOT .)
+    FUNCTION_STRING reduce using rule 24 (function_dot -> DOT .)
+    CHAR            reduce using rule 24 (function_dot -> DOT .)
+    EMIT            reduce using rule 24 (function_dot -> DOT .)
+    SPACE           reduce using rule 24 (function_dot -> DOT .)
+    CR              reduce using rule 24 (function_dot -> DOT .)
+    2DUP            reduce using rule 24 (function_dot -> DOT .)
+    CONDICIONAL1    reduce using rule 24 (function_dot -> DOT .)
+    CONDICIONAL2    reduce using rule 24 (function_dot -> DOT .)
+    $end            reduce using rule 24 (function_dot -> DOT .)
+    ADD             reduce using rule 24 (function_dot -> DOT .)
+    MINUS           reduce using rule 24 (function_dot -> DOT .)
+    TIMES           reduce using rule 24 (function_dot -> DOT .)
+    DIVIDE          reduce using rule 24 (function_dot -> DOT .)
+    MOD             reduce using rule 24 (function_dot -> DOT .)
+    INF             reduce using rule 24 (function_dot -> DOT .)
+    INFEQ           reduce using rule 24 (function_dot -> DOT .)
+    SUP             reduce using rule 24 (function_dot -> DOT .)
+    SUPEQ           reduce using rule 24 (function_dot -> DOT .)
+
+
+state 20
+
+    (21) function_string -> FUNCTION_STRING .
+
+    FUNCTION        reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    NUMBER          reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    DOT             reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    FUNCTION_STRING reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    CHAR            reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    EMIT            reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    SPACE           reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    CR              reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    2DUP            reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    CONDICIONAL1    reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    CONDICIONAL2    reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    $end            reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    ADD             reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    MINUS           reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    TIMES           reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    DIVIDE          reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    MOD             reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    INF             reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    INFEQ           reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    SUP             reduce using rule 21 (function_string -> FUNCTION_STRING .)
+    SUPEQ           reduce using rule 21 (function_string -> FUNCTION_STRING .)
+
+
+state 21
+
+    (19) function_char -> CHAR .
+
+    FUNCTION        reduce using rule 19 (function_char -> CHAR .)
+    NUMBER          reduce using rule 19 (function_char -> CHAR .)
+    DOT             reduce using rule 19 (function_char -> CHAR .)
+    FUNCTION_STRING reduce using rule 19 (function_char -> CHAR .)
+    CHAR            reduce using rule 19 (function_char -> CHAR .)
+    EMIT            reduce using rule 19 (function_char -> CHAR .)
+    SPACE           reduce using rule 19 (function_char -> CHAR .)
+    CR              reduce using rule 19 (function_char -> CHAR .)
+    2DUP            reduce using rule 19 (function_char -> CHAR .)
+    CONDICIONAL1    reduce using rule 19 (function_char -> CHAR .)
+    CONDICIONAL2    reduce using rule 19 (function_char -> CHAR .)
+    $end            reduce using rule 19 (function_char -> CHAR .)
+    ADD             reduce using rule 19 (function_char -> CHAR .)
+    MINUS           reduce using rule 19 (function_char -> CHAR .)
+    TIMES           reduce using rule 19 (function_char -> CHAR .)
+    DIVIDE          reduce using rule 19 (function_char -> CHAR .)
+    MOD             reduce using rule 19 (function_char -> CHAR .)
+    INF             reduce using rule 19 (function_char -> CHAR .)
+    INFEQ           reduce using rule 19 (function_char -> CHAR .)
+    SUP             reduce using rule 19 (function_char -> CHAR .)
+    SUPEQ           reduce using rule 19 (function_char -> CHAR .)
+
+
+state 22
+
+    (22) function_emit -> EMIT .
+
+    FUNCTION        reduce using rule 22 (function_emit -> EMIT .)
+    NUMBER          reduce using rule 22 (function_emit -> EMIT .)
+    DOT             reduce using rule 22 (function_emit -> EMIT .)
+    FUNCTION_STRING reduce using rule 22 (function_emit -> EMIT .)
+    CHAR            reduce using rule 22 (function_emit -> EMIT .)
+    EMIT            reduce using rule 22 (function_emit -> EMIT .)
+    SPACE           reduce using rule 22 (function_emit -> EMIT .)
+    CR              reduce using rule 22 (function_emit -> EMIT .)
+    2DUP            reduce using rule 22 (function_emit -> EMIT .)
+    CONDICIONAL1    reduce using rule 22 (function_emit -> EMIT .)
+    CONDICIONAL2    reduce using rule 22 (function_emit -> EMIT .)
+    $end            reduce using rule 22 (function_emit -> EMIT .)
+    ADD             reduce using rule 22 (function_emit -> EMIT .)
+    MINUS           reduce using rule 22 (function_emit -> EMIT .)
+    TIMES           reduce using rule 22 (function_emit -> EMIT .)
+    DIVIDE          reduce using rule 22 (function_emit -> EMIT .)
+    MOD             reduce using rule 22 (function_emit -> EMIT .)
+    INF             reduce using rule 22 (function_emit -> EMIT .)
+    INFEQ           reduce using rule 22 (function_emit -> EMIT .)
+    SUP             reduce using rule 22 (function_emit -> EMIT .)
+    SUPEQ           reduce using rule 22 (function_emit -> EMIT .)
+
+
+state 23
+
+    (20) space -> SPACE .
+
+    FUNCTION        reduce using rule 20 (space -> SPACE .)
+    NUMBER          reduce using rule 20 (space -> SPACE .)
+    DOT             reduce using rule 20 (space -> SPACE .)
+    FUNCTION_STRING reduce using rule 20 (space -> SPACE .)
+    CHAR            reduce using rule 20 (space -> SPACE .)
+    EMIT            reduce using rule 20 (space -> SPACE .)
+    SPACE           reduce using rule 20 (space -> SPACE .)
+    CR              reduce using rule 20 (space -> SPACE .)
+    2DUP            reduce using rule 20 (space -> SPACE .)
+    CONDICIONAL1    reduce using rule 20 (space -> SPACE .)
+    CONDICIONAL2    reduce using rule 20 (space -> SPACE .)
+    $end            reduce using rule 20 (space -> SPACE .)
+    ADD             reduce using rule 20 (space -> SPACE .)
+    MINUS           reduce using rule 20 (space -> SPACE .)
+    TIMES           reduce using rule 20 (space -> SPACE .)
+    DIVIDE          reduce using rule 20 (space -> SPACE .)
+    MOD             reduce using rule 20 (space -> SPACE .)
+    INF             reduce using rule 20 (space -> SPACE .)
+    INFEQ           reduce using rule 20 (space -> SPACE .)
+    SUP             reduce using rule 20 (space -> SPACE .)
+    SUPEQ           reduce using rule 20 (space -> SPACE .)
+
+
+state 24
+
+    (18) cr -> CR .
+
+    FUNCTION        reduce using rule 18 (cr -> CR .)
+    NUMBER          reduce using rule 18 (cr -> CR .)
+    DOT             reduce using rule 18 (cr -> CR .)
+    FUNCTION_STRING reduce using rule 18 (cr -> CR .)
+    CHAR            reduce using rule 18 (cr -> CR .)
+    EMIT            reduce using rule 18 (cr -> CR .)
+    SPACE           reduce using rule 18 (cr -> CR .)
+    CR              reduce using rule 18 (cr -> CR .)
+    2DUP            reduce using rule 18 (cr -> CR .)
+    CONDICIONAL1    reduce using rule 18 (cr -> CR .)
+    CONDICIONAL2    reduce using rule 18 (cr -> CR .)
+    $end            reduce using rule 18 (cr -> CR .)
+    ADD             reduce using rule 18 (cr -> CR .)
+    MINUS           reduce using rule 18 (cr -> CR .)
+    TIMES           reduce using rule 18 (cr -> CR .)
+    DIVIDE          reduce using rule 18 (cr -> CR .)
+    MOD             reduce using rule 18 (cr -> CR .)
+    INF             reduce using rule 18 (cr -> CR .)
+    INFEQ           reduce using rule 18 (cr -> CR .)
+    SUP             reduce using rule 18 (cr -> CR .)
+    SUPEQ           reduce using rule 18 (cr -> CR .)
+
+
+state 25
+
+    (34) 2dup -> 2DUP .
+
+    FUNCTION        reduce using rule 34 (2dup -> 2DUP .)
+    NUMBER          reduce using rule 34 (2dup -> 2DUP .)
+    DOT             reduce using rule 34 (2dup -> 2DUP .)
+    FUNCTION_STRING reduce using rule 34 (2dup -> 2DUP .)
+    CHAR            reduce using rule 34 (2dup -> 2DUP .)
+    EMIT            reduce using rule 34 (2dup -> 2DUP .)
+    SPACE           reduce using rule 34 (2dup -> 2DUP .)
+    CR              reduce using rule 34 (2dup -> 2DUP .)
+    2DUP            reduce using rule 34 (2dup -> 2DUP .)
+    CONDICIONAL1    reduce using rule 34 (2dup -> 2DUP .)
+    CONDICIONAL2    reduce using rule 34 (2dup -> 2DUP .)
+    $end            reduce using rule 34 (2dup -> 2DUP .)
+    ADD             reduce using rule 34 (2dup -> 2DUP .)
+    MINUS           reduce using rule 34 (2dup -> 2DUP .)
+    TIMES           reduce using rule 34 (2dup -> 2DUP .)
+    DIVIDE          reduce using rule 34 (2dup -> 2DUP .)
+    MOD             reduce using rule 34 (2dup -> 2DUP .)
+    INF             reduce using rule 34 (2dup -> 2DUP .)
+    INFEQ           reduce using rule 34 (2dup -> 2DUP .)
+    SUP             reduce using rule 34 (2dup -> 2DUP .)
+    SUPEQ           reduce using rule 34 (2dup -> 2DUP .)
+
+
+state 26
+
+    (32) condicinal1 -> CONDICIONAL1 .
+
+    FUNCTION        reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    NUMBER          reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    DOT             reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    FUNCTION_STRING reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    CHAR            reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    EMIT            reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    SPACE           reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    CR              reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    2DUP            reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    CONDICIONAL1    reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    CONDICIONAL2    reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    $end            reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    ADD             reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    MINUS           reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    TIMES           reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    DIVIDE          reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    MOD             reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    INF             reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    INFEQ           reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    SUP             reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+    SUPEQ           reduce using rule 32 (condicinal1 -> CONDICIONAL1 .)
+
+
+state 27
+
+    (33) condicinal2 -> CONDICIONAL2 .
+
+    FUNCTION        reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    NUMBER          reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    DOT             reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    FUNCTION_STRING reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    CHAR            reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    EMIT            reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    SPACE           reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    CR              reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    2DUP            reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    CONDICIONAL1    reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    CONDICIONAL2    reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    $end            reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    ADD             reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    MINUS           reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    TIMES           reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    DIVIDE          reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    MOD             reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    INF             reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    INFEQ           reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    SUP             reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+    SUPEQ           reduce using rule 33 (condicinal2 -> CONDICIONAL2 .)
+
+
+state 28
+
+    (2) statements -> statements statement .
+    (25) arithmetic_expression -> statement . statement arithmetic_op
+    (31) comparison_expression -> statement . statement comparison_op
+    (4) statement -> . function_declaration
+    (5) statement -> . expressiontypes
+    (6) statement -> . function_dot
+    (7) statement -> . arithmetic_expression
+    (8) statement -> . comparison_expression
+    (9) statement -> . function_string
+    (10) statement -> . function_char
+    (11) statement -> . function_emit
+    (12) statement -> . space
+    (13) statement -> . cr
+    (14) statement -> . 2dup
+    (15) statement -> . condicinal1
+    (16) statement -> . condicinal2
+    (17) function_declaration -> . FUNCTION
+    (23) expressiontypes -> . NUMBER
+    (24) function_dot -> . DOT
+    (25) arithmetic_expression -> . statement statement arithmetic_op
+    (31) comparison_expression -> . statement statement comparison_op
+    (21) function_string -> . FUNCTION_STRING
+    (19) function_char -> . CHAR
+    (22) function_emit -> . EMIT
+    (20) space -> . SPACE
+    (18) cr -> . CR
+    (34) 2dup -> . 2DUP
+    (32) condicinal1 -> . CONDICIONAL1
+    (33) condicinal2 -> . CONDICIONAL2
+
+  ! shift/reduce conflict for FUNCTION resolved as shift
+  ! shift/reduce conflict for NUMBER resolved as shift
+  ! shift/reduce conflict for DOT resolved as shift
+  ! shift/reduce conflict for FUNCTION_STRING resolved as shift
+  ! shift/reduce conflict for CHAR resolved as shift
+  ! shift/reduce conflict for EMIT resolved as shift
+  ! shift/reduce conflict for SPACE resolved as shift
+  ! shift/reduce conflict for CR resolved as shift
+  ! shift/reduce conflict for 2DUP resolved as shift
+  ! shift/reduce conflict for CONDICIONAL1 resolved as shift
+  ! shift/reduce conflict for CONDICIONAL2 resolved as shift
+    $end            reduce using rule 2 (statements -> statements statement .)
+    FUNCTION        shift and go to state 17
+    NUMBER          shift and go to state 18
+    DOT             shift and go to state 19
+    FUNCTION_STRING shift and go to state 20
+    CHAR            shift and go to state 21
+    EMIT            shift and go to state 22
+    SPACE           shift and go to state 23
+    CR              shift and go to state 24
+    2DUP            shift and go to state 25
+    CONDICIONAL1    shift and go to state 26
+    CONDICIONAL2    shift and go to state 27
+
+  ! FUNCTION        [ reduce using rule 2 (statements -> statements statement .) ]
+  ! NUMBER          [ reduce using rule 2 (statements -> statements statement .) ]
+  ! DOT             [ reduce using rule 2 (statements -> statements statement .) ]
+  ! FUNCTION_STRING [ reduce using rule 2 (statements -> statements statement .) ]
+  ! CHAR            [ reduce using rule 2 (statements -> statements statement .) ]
+  ! EMIT            [ reduce using rule 2 (statements -> statements statement .) ]
+  ! SPACE           [ reduce using rule 2 (statements -> statements statement .) ]
+  ! CR              [ reduce using rule 2 (statements -> statements statement .) ]
+  ! 2DUP            [ reduce using rule 2 (statements -> statements statement .) ]
+  ! CONDICIONAL1    [ reduce using rule 2 (statements -> statements statement .) ]
+  ! CONDICIONAL2    [ reduce using rule 2 (statements -> statements statement .) ]
+
+    statement                      shift and go to state 29
+    function_declaration           shift and go to state 4
+    expressiontypes                shift and go to state 5
+    function_dot                   shift and go to state 6
+    arithmetic_expression          shift and go to state 7
+    comparison_expression          shift and go to state 8
+    function_string                shift and go to state 9
+    function_char                  shift and go to state 10
+    function_emit                  shift and go to state 11
+    space                          shift and go to state 12
+    cr                             shift and go to state 13
+    2dup                           shift and go to state 14
+    condicinal1                    shift and go to state 15
+    condicinal2                    shift and go to state 16
+
+state 29
+
+    (25) arithmetic_expression -> statement statement . arithmetic_op
+    (31) comparison_expression -> statement statement . comparison_op
+    (25) arithmetic_expression -> statement . statement arithmetic_op
+    (31) comparison_expression -> statement . statement comparison_op
+    (26) arithmetic_op -> . ADD
+    (27) arithmetic_op -> . MINUS
+    (28) arithmetic_op -> . TIMES
+    (29) arithmetic_op -> . DIVIDE
+    (30) arithmetic_op -> . MOD
+    (35) comparison_op -> . INF
+    (36) comparison_op -> . INFEQ
+    (37) comparison_op -> . SUP
+    (38) comparison_op -> . SUPEQ
+    (4) statement -> . function_declaration
+    (5) statement -> . expressiontypes
+    (6) statement -> . function_dot
+    (7) statement -> . arithmetic_expression
+    (8) statement -> . comparison_expression
+    (9) statement -> . function_string
+    (10) statement -> . function_char
+    (11) statement -> . function_emit
+    (12) statement -> . space
+    (13) statement -> . cr
+    (14) statement -> . 2dup
+    (15) statement -> . condicinal1
+    (16) statement -> . condicinal2
+    (17) function_declaration -> . FUNCTION
+    (23) expressiontypes -> . NUMBER
+    (24) function_dot -> . DOT
+    (25) arithmetic_expression -> . statement statement arithmetic_op
+    (31) comparison_expression -> . statement statement comparison_op
+    (21) function_string -> . FUNCTION_STRING
+    (19) function_char -> . CHAR
+    (22) function_emit -> . EMIT
+    (20) space -> . SPACE
+    (18) cr -> . CR
+    (34) 2dup -> . 2DUP
+    (32) condicinal1 -> . CONDICIONAL1
+    (33) condicinal2 -> . CONDICIONAL2
+
+    ADD             shift and go to state 32
+    MINUS           shift and go to state 33
+    TIMES           shift and go to state 34
+    DIVIDE          shift and go to state 35
+    MOD             shift and go to state 36
+    INF             shift and go to state 37
+    INFEQ           shift and go to state 38
+    SUP             shift and go to state 39
+    SUPEQ           shift and go to state 40
+    FUNCTION        shift and go to state 17
+    NUMBER          shift and go to state 18
+    DOT             shift and go to state 19
+    FUNCTION_STRING shift and go to state 20
+    CHAR            shift and go to state 21
+    EMIT            shift and go to state 22
+    SPACE           shift and go to state 23
+    CR              shift and go to state 24
+    2DUP            shift and go to state 25
+    CONDICIONAL1    shift and go to state 26
+    CONDICIONAL2    shift and go to state 27
+
+    statement                      shift and go to state 29
+    arithmetic_op                  shift and go to state 30
+    comparison_op                  shift and go to state 31
+    function_declaration           shift and go to state 4
+    expressiontypes                shift and go to state 5
+    function_dot                   shift and go to state 6
+    arithmetic_expression          shift and go to state 7
+    comparison_expression          shift and go to state 8
+    function_string                shift and go to state 9
+    function_char                  shift and go to state 10
+    function_emit                  shift and go to state 11
+    space                          shift and go to state 12
+    cr                             shift and go to state 13
+    2dup                           shift and go to state 14
+    condicinal1                    shift and go to state 15
+    condicinal2                    shift and go to state 16
+
+state 30
+
+    (25) arithmetic_expression -> statement statement arithmetic_op .
+
+    FUNCTION        reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    NUMBER          reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    DOT             reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    FUNCTION_STRING reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    CHAR            reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    EMIT            reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    SPACE           reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    CR              reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    2DUP            reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    CONDICIONAL1    reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    CONDICIONAL2    reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    $end            reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    ADD             reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    MINUS           reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    TIMES           reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    DIVIDE          reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    MOD             reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    INF             reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    INFEQ           reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    SUP             reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+    SUPEQ           reduce using rule 25 (arithmetic_expression -> statement statement arithmetic_op .)
+
+
+state 31
+
+    (31) comparison_expression -> statement statement comparison_op .
+
+    FUNCTION        reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    NUMBER          reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    DOT             reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    FUNCTION_STRING reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    CHAR            reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    EMIT            reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    SPACE           reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    CR              reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    2DUP            reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    CONDICIONAL1    reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    CONDICIONAL2    reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    $end            reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    ADD             reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    MINUS           reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    TIMES           reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    DIVIDE          reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    MOD             reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    INF             reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    INFEQ           reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    SUP             reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+    SUPEQ           reduce using rule 31 (comparison_expression -> statement statement comparison_op .)
+
+
+state 32
+
+    (26) arithmetic_op -> ADD .
+
+    FUNCTION        reduce using rule 26 (arithmetic_op -> ADD .)
+    NUMBER          reduce using rule 26 (arithmetic_op -> ADD .)
+    DOT             reduce using rule 26 (arithmetic_op -> ADD .)
+    FUNCTION_STRING reduce using rule 26 (arithmetic_op -> ADD .)
+    CHAR            reduce using rule 26 (arithmetic_op -> ADD .)
+    EMIT            reduce using rule 26 (arithmetic_op -> ADD .)
+    SPACE           reduce using rule 26 (arithmetic_op -> ADD .)
+    CR              reduce using rule 26 (arithmetic_op -> ADD .)
+    2DUP            reduce using rule 26 (arithmetic_op -> ADD .)
+    CONDICIONAL1    reduce using rule 26 (arithmetic_op -> ADD .)
+    CONDICIONAL2    reduce using rule 26 (arithmetic_op -> ADD .)
+    $end            reduce using rule 26 (arithmetic_op -> ADD .)
+    ADD             reduce using rule 26 (arithmetic_op -> ADD .)
+    MINUS           reduce using rule 26 (arithmetic_op -> ADD .)
+    TIMES           reduce using rule 26 (arithmetic_op -> ADD .)
+    DIVIDE          reduce using rule 26 (arithmetic_op -> ADD .)
+    MOD             reduce using rule 26 (arithmetic_op -> ADD .)
+    INF             reduce using rule 26 (arithmetic_op -> ADD .)
+    INFEQ           reduce using rule 26 (arithmetic_op -> ADD .)
+    SUP             reduce using rule 26 (arithmetic_op -> ADD .)
+    SUPEQ           reduce using rule 26 (arithmetic_op -> ADD .)
+
+
+state 33
+
+    (27) arithmetic_op -> MINUS .
+
+    FUNCTION        reduce using rule 27 (arithmetic_op -> MINUS .)
+    NUMBER          reduce using rule 27 (arithmetic_op -> MINUS .)
+    DOT             reduce using rule 27 (arithmetic_op -> MINUS .)
+    FUNCTION_STRING reduce using rule 27 (arithmetic_op -> MINUS .)
+    CHAR            reduce using rule 27 (arithmetic_op -> MINUS .)
+    EMIT            reduce using rule 27 (arithmetic_op -> MINUS .)
+    SPACE           reduce using rule 27 (arithmetic_op -> MINUS .)
+    CR              reduce using rule 27 (arithmetic_op -> MINUS .)
+    2DUP            reduce using rule 27 (arithmetic_op -> MINUS .)
+    CONDICIONAL1    reduce using rule 27 (arithmetic_op -> MINUS .)
+    CONDICIONAL2    reduce using rule 27 (arithmetic_op -> MINUS .)
+    $end            reduce using rule 27 (arithmetic_op -> MINUS .)
+    ADD             reduce using rule 27 (arithmetic_op -> MINUS .)
+    MINUS           reduce using rule 27 (arithmetic_op -> MINUS .)
+    TIMES           reduce using rule 27 (arithmetic_op -> MINUS .)
+    DIVIDE          reduce using rule 27 (arithmetic_op -> MINUS .)
+    MOD             reduce using rule 27 (arithmetic_op -> MINUS .)
+    INF             reduce using rule 27 (arithmetic_op -> MINUS .)
+    INFEQ           reduce using rule 27 (arithmetic_op -> MINUS .)
+    SUP             reduce using rule 27 (arithmetic_op -> MINUS .)
+    SUPEQ           reduce using rule 27 (arithmetic_op -> MINUS .)
+
+
+state 34
+
+    (28) arithmetic_op -> TIMES .
+
+    FUNCTION        reduce using rule 28 (arithmetic_op -> TIMES .)
+    NUMBER          reduce using rule 28 (arithmetic_op -> TIMES .)
+    DOT             reduce using rule 28 (arithmetic_op -> TIMES .)
+    FUNCTION_STRING reduce using rule 28 (arithmetic_op -> TIMES .)
+    CHAR            reduce using rule 28 (arithmetic_op -> TIMES .)
+    EMIT            reduce using rule 28 (arithmetic_op -> TIMES .)
+    SPACE           reduce using rule 28 (arithmetic_op -> TIMES .)
+    CR              reduce using rule 28 (arithmetic_op -> TIMES .)
+    2DUP            reduce using rule 28 (arithmetic_op -> TIMES .)
+    CONDICIONAL1    reduce using rule 28 (arithmetic_op -> TIMES .)
+    CONDICIONAL2    reduce using rule 28 (arithmetic_op -> TIMES .)
+    $end            reduce using rule 28 (arithmetic_op -> TIMES .)
+    ADD             reduce using rule 28 (arithmetic_op -> TIMES .)
+    MINUS           reduce using rule 28 (arithmetic_op -> TIMES .)
+    TIMES           reduce using rule 28 (arithmetic_op -> TIMES .)
+    DIVIDE          reduce using rule 28 (arithmetic_op -> TIMES .)
+    MOD             reduce using rule 28 (arithmetic_op -> TIMES .)
+    INF             reduce using rule 28 (arithmetic_op -> TIMES .)
+    INFEQ           reduce using rule 28 (arithmetic_op -> TIMES .)
+    SUP             reduce using rule 28 (arithmetic_op -> TIMES .)
+    SUPEQ           reduce using rule 28 (arithmetic_op -> TIMES .)
+
+
+state 35
+
+    (29) arithmetic_op -> DIVIDE .
+
+    FUNCTION        reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    NUMBER          reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    DOT             reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    FUNCTION_STRING reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    CHAR            reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    EMIT            reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    SPACE           reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    CR              reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    2DUP            reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    CONDICIONAL1    reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    CONDICIONAL2    reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    $end            reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    ADD             reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    MINUS           reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    TIMES           reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    DIVIDE          reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    MOD             reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    INF             reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    INFEQ           reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    SUP             reduce using rule 29 (arithmetic_op -> DIVIDE .)
+    SUPEQ           reduce using rule 29 (arithmetic_op -> DIVIDE .)
+
+
+state 36
+
+    (30) arithmetic_op -> MOD .
+
+    FUNCTION        reduce using rule 30 (arithmetic_op -> MOD .)
+    NUMBER          reduce using rule 30 (arithmetic_op -> MOD .)
+    DOT             reduce using rule 30 (arithmetic_op -> MOD .)
+    FUNCTION_STRING reduce using rule 30 (arithmetic_op -> MOD .)
+    CHAR            reduce using rule 30 (arithmetic_op -> MOD .)
+    EMIT            reduce using rule 30 (arithmetic_op -> MOD .)
+    SPACE           reduce using rule 30 (arithmetic_op -> MOD .)
+    CR              reduce using rule 30 (arithmetic_op -> MOD .)
+    2DUP            reduce using rule 30 (arithmetic_op -> MOD .)
+    CONDICIONAL1    reduce using rule 30 (arithmetic_op -> MOD .)
+    CONDICIONAL2    reduce using rule 30 (arithmetic_op -> MOD .)
+    $end            reduce using rule 30 (arithmetic_op -> MOD .)
+    ADD             reduce using rule 30 (arithmetic_op -> MOD .)
+    MINUS           reduce using rule 30 (arithmetic_op -> MOD .)
+    TIMES           reduce using rule 30 (arithmetic_op -> MOD .)
+    DIVIDE          reduce using rule 30 (arithmetic_op -> MOD .)
+    MOD             reduce using rule 30 (arithmetic_op -> MOD .)
+    INF             reduce using rule 30 (arithmetic_op -> MOD .)
+    INFEQ           reduce using rule 30 (arithmetic_op -> MOD .)
+    SUP             reduce using rule 30 (arithmetic_op -> MOD .)
+    SUPEQ           reduce using rule 30 (arithmetic_op -> MOD .)
+
+
+state 37
+
+    (35) comparison_op -> INF .
+
+    FUNCTION        reduce using rule 35 (comparison_op -> INF .)
+    NUMBER          reduce using rule 35 (comparison_op -> INF .)
+    DOT             reduce using rule 35 (comparison_op -> INF .)
+    FUNCTION_STRING reduce using rule 35 (comparison_op -> INF .)
+    CHAR            reduce using rule 35 (comparison_op -> INF .)
+    EMIT            reduce using rule 35 (comparison_op -> INF .)
+    SPACE           reduce using rule 35 (comparison_op -> INF .)
+    CR              reduce using rule 35 (comparison_op -> INF .)
+    2DUP            reduce using rule 35 (comparison_op -> INF .)
+    CONDICIONAL1    reduce using rule 35 (comparison_op -> INF .)
+    CONDICIONAL2    reduce using rule 35 (comparison_op -> INF .)
+    $end            reduce using rule 35 (comparison_op -> INF .)
+    ADD             reduce using rule 35 (comparison_op -> INF .)
+    MINUS           reduce using rule 35 (comparison_op -> INF .)
+    TIMES           reduce using rule 35 (comparison_op -> INF .)
+    DIVIDE          reduce using rule 35 (comparison_op -> INF .)
+    MOD             reduce using rule 35 (comparison_op -> INF .)
+    INF             reduce using rule 35 (comparison_op -> INF .)
+    INFEQ           reduce using rule 35 (comparison_op -> INF .)
+    SUP             reduce using rule 35 (comparison_op -> INF .)
+    SUPEQ           reduce using rule 35 (comparison_op -> INF .)
+
+
+state 38
+
+    (36) comparison_op -> INFEQ .
+
+    FUNCTION        reduce using rule 36 (comparison_op -> INFEQ .)
+    NUMBER          reduce using rule 36 (comparison_op -> INFEQ .)
+    DOT             reduce using rule 36 (comparison_op -> INFEQ .)
+    FUNCTION_STRING reduce using rule 36 (comparison_op -> INFEQ .)
+    CHAR            reduce using rule 36 (comparison_op -> INFEQ .)
+    EMIT            reduce using rule 36 (comparison_op -> INFEQ .)
+    SPACE           reduce using rule 36 (comparison_op -> INFEQ .)
+    CR              reduce using rule 36 (comparison_op -> INFEQ .)
+    2DUP            reduce using rule 36 (comparison_op -> INFEQ .)
+    CONDICIONAL1    reduce using rule 36 (comparison_op -> INFEQ .)
+    CONDICIONAL2    reduce using rule 36 (comparison_op -> INFEQ .)
+    $end            reduce using rule 36 (comparison_op -> INFEQ .)
+    ADD             reduce using rule 36 (comparison_op -> INFEQ .)
+    MINUS           reduce using rule 36 (comparison_op -> INFEQ .)
+    TIMES           reduce using rule 36 (comparison_op -> INFEQ .)
+    DIVIDE          reduce using rule 36 (comparison_op -> INFEQ .)
+    MOD             reduce using rule 36 (comparison_op -> INFEQ .)
+    INF             reduce using rule 36 (comparison_op -> INFEQ .)
+    INFEQ           reduce using rule 36 (comparison_op -> INFEQ .)
+    SUP             reduce using rule 36 (comparison_op -> INFEQ .)
+    SUPEQ           reduce using rule 36 (comparison_op -> INFEQ .)
+
+
+state 39
+
+    (37) comparison_op -> SUP .
+
+    FUNCTION        reduce using rule 37 (comparison_op -> SUP .)
+    NUMBER          reduce using rule 37 (comparison_op -> SUP .)
+    DOT             reduce using rule 37 (comparison_op -> SUP .)
+    FUNCTION_STRING reduce using rule 37 (comparison_op -> SUP .)
+    CHAR            reduce using rule 37 (comparison_op -> SUP .)
+    EMIT            reduce using rule 37 (comparison_op -> SUP .)
+    SPACE           reduce using rule 37 (comparison_op -> SUP .)
+    CR              reduce using rule 37 (comparison_op -> SUP .)
+    2DUP            reduce using rule 37 (comparison_op -> SUP .)
+    CONDICIONAL1    reduce using rule 37 (comparison_op -> SUP .)
+    CONDICIONAL2    reduce using rule 37 (comparison_op -> SUP .)
+    $end            reduce using rule 37 (comparison_op -> SUP .)
+    ADD             reduce using rule 37 (comparison_op -> SUP .)
+    MINUS           reduce using rule 37 (comparison_op -> SUP .)
+    TIMES           reduce using rule 37 (comparison_op -> SUP .)
+    DIVIDE          reduce using rule 37 (comparison_op -> SUP .)
+    MOD             reduce using rule 37 (comparison_op -> SUP .)
+    INF             reduce using rule 37 (comparison_op -> SUP .)
+    INFEQ           reduce using rule 37 (comparison_op -> SUP .)
+    SUP             reduce using rule 37 (comparison_op -> SUP .)
+    SUPEQ           reduce using rule 37 (comparison_op -> SUP .)
+
+
+state 40
+
+    (38) comparison_op -> SUPEQ .
+
+    FUNCTION        reduce using rule 38 (comparison_op -> SUPEQ .)
+    NUMBER          reduce using rule 38 (comparison_op -> SUPEQ .)
+    DOT             reduce using rule 38 (comparison_op -> SUPEQ .)
+    FUNCTION_STRING reduce using rule 38 (comparison_op -> SUPEQ .)
+    CHAR            reduce using rule 38 (comparison_op -> SUPEQ .)
+    EMIT            reduce using rule 38 (comparison_op -> SUPEQ .)
+    SPACE           reduce using rule 38 (comparison_op -> SUPEQ .)
+    CR              reduce using rule 38 (comparison_op -> SUPEQ .)
+    2DUP            reduce using rule 38 (comparison_op -> SUPEQ .)
+    CONDICIONAL1    reduce using rule 38 (comparison_op -> SUPEQ .)
+    CONDICIONAL2    reduce using rule 38 (comparison_op -> SUPEQ .)
+    $end            reduce using rule 38 (comparison_op -> SUPEQ .)
+    ADD             reduce using rule 38 (comparison_op -> SUPEQ .)
+    MINUS           reduce using rule 38 (comparison_op -> SUPEQ .)
+    TIMES           reduce using rule 38 (comparison_op -> SUPEQ .)
+    DIVIDE          reduce using rule 38 (comparison_op -> SUPEQ .)
+    MOD             reduce using rule 38 (comparison_op -> SUPEQ .)
+    INF             reduce using rule 38 (comparison_op -> SUPEQ .)
+    INFEQ           reduce using rule 38 (comparison_op -> SUPEQ .)
+    SUP             reduce using rule 38 (comparison_op -> SUPEQ .)
+    SUPEQ           reduce using rule 38 (comparison_op -> SUPEQ .)
+
+WARNING: 
+WARNING: Conflicts:
+WARNING: 
+WARNING: shift/reduce conflict for FUNCTION in state 3 resolved as shift
+WARNING: shift/reduce conflict for NUMBER in state 3 resolved as shift
+WARNING: shift/reduce conflict for DOT in state 3 resolved as shift
+WARNING: shift/reduce conflict for FUNCTION_STRING in state 3 resolved as shift
+WARNING: shift/reduce conflict for CHAR in state 3 resolved as shift
+WARNING: shift/reduce conflict for EMIT in state 3 resolved as shift
+WARNING: shift/reduce conflict for SPACE in state 3 resolved as shift
+WARNING: shift/reduce conflict for CR in state 3 resolved as shift
+WARNING: shift/reduce conflict for 2DUP in state 3 resolved as shift
+WARNING: shift/reduce conflict for CONDICIONAL1 in state 3 resolved as shift
+WARNING: shift/reduce conflict for CONDICIONAL2 in state 3 resolved as shift
+WARNING: shift/reduce conflict for FUNCTION in state 28 resolved as shift
+WARNING: shift/reduce conflict for NUMBER in state 28 resolved as shift
+WARNING: shift/reduce conflict for DOT in state 28 resolved as shift
+WARNING: shift/reduce conflict for FUNCTION_STRING in state 28 resolved as shift
+WARNING: shift/reduce conflict for CHAR in state 28 resolved as shift
+WARNING: shift/reduce conflict for EMIT in state 28 resolved as shift
+WARNING: shift/reduce conflict for SPACE in state 28 resolved as shift
+WARNING: shift/reduce conflict for CR in state 28 resolved as shift
+WARNING: shift/reduce conflict for 2DUP in state 28 resolved as shift
+WARNING: shift/reduce conflict for CONDICIONAL1 in state 28 resolved as shift
+WARNING: shift/reduce conflict for CONDICIONAL2 in state 28 resolved as shift
